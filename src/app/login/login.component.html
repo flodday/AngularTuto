@@ -1,0 +1,39 @@
+<div class="card">
+  <div class="login-form-container">
+    <form id="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <p>
+        <label for="login">Identifiant</label>
+        <input id="login" type="text" formControlName="login" />
+        <span
+          class="help-block"
+          *ngIf="(loginForm.controls.login.touched || loginForm.controls.login.dirty) && loginForm.controls.login.errors"
+        >
+          <span *ngIf="loginForm.controls.login.errors['required']">
+            Entrez votre identifiant
+          </span>
+          <span *ngIf="loginForm.controls.login.errors['minlength']">
+            L'identifiant doit comporter au moins 3 caractères.
+          </span>
+        </span>
+      </p>
+      <p>
+        <label for="password">Mot de passe</label>
+        <input id="password" type="password" formControlName="password" />
+        <span
+          class="help-block"
+          *ngIf="(loginForm.controls.password.touched || loginForm.controls.password.dirty) && loginForm.controls.password.errors"
+        >
+          <span *ngIf="loginForm.controls.password.errors['required']">
+            Entrez votre mot de passe
+          </span>
+          <span *ngIf="loginForm.controls.password.errors['checkPassword']">
+            Le mot de passe doit comporter au moins 5 caractères.
+          </span>
+        </span>
+      </p>
+      <p>
+        <button type="submit" [disabled]="!loginForm.valid">Connexion</button>
+      </p>
+    </form>
+  </div>
+</div>
