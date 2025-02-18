@@ -1,4 +1,5 @@
+<crm-header></crm-header>
 <h1>{{content}}</h1>
-
 <crm-login></crm-login>
+<crm-dummy [label]="'Test Label'" (clicked)="handleClick($event)"></crm-dummy>
 <router-outlet></router-outlet>
