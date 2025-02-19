@@ -1,15 +1,12 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { AbstractControl } from '@angular/forms';
-import {NgForOf, NgIf} from '@angular/common';
+
 
 @Component({
   selector: 'crm-help',
   templateUrl: './help.component.html',
   styleUrls: ['./help.component.scss'],
-  imports: [
-    NgIf,
-    NgForOf
-  ]
+  imports: []
 })
 export class HelpComponent implements OnInit {
   @Input()

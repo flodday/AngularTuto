@@ -1,3 +1,7 @@
-<span class="help-block" *ngIf="isError()">
-  <span *ngFor="let msg of errors">{{msg}}</span>
-</span>
+@if (isError()) {
+  <span class="help-block">
+    @for (msg of errors; track msg) {
+      <span>{{msg}}</span>
+    }
+  </span>
+}

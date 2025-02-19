@@ -8,10 +8,10 @@
             <input matInput id="login" type="text" formControlName="login" />
           </mat-form-field>
           <crm-help
-            [field]="loginForm.controls.login"
+            [field]="loginForm.controls['login']"
             [errorMessages]="{
-              required: 'Entrez votre login',
-              minlength: 'Le login doit avoir un minimum de 3 caractères.'
+              required: 'Entrez votre identifiant',
+              minlength: 'minimum de 3 caractères.'
             }"
           ></crm-help>
         </p>
@@ -32,3 +32,4 @@
       </form>
     </div>
   </div>
+</div>
