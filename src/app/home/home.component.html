@@ -1,3 +1,7 @@
 <div class="home-container">
   <h1>Bienvenue sur la page d'accueil</h1>
 </div>
+<button label="Overview" (click)="onClick()">Overview</button>
+<div *ngIf="myObservable | async as result">
+  <p>Result: {{ result }}</p>
+</div>
